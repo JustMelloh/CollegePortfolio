@@ -92,4 +92,40 @@ public class SingleLinkedList {
     *  Deleting at the beginning
     *  Deleting  at the ending
     *  Deleting anywhere on the list. */
+
+    public void deleteNode(int location){
+        if (head == null) {
+            System.out.println("The linked list does not exist.");
+            return;
+        } else if (location == 0) {
+            head = head.next;
+            size--;
+            if (size == 0) {
+                tail = null;
+            }
+        } else if (location >= size) {
+            Node tempNode = head;
+            for (int i = 0; i < size - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            if (tempNode == head) {
+                head = tail = null;
+                size--;
+                return;
+            }
+            tempNode.next = null;
+            tail = tempNode;
+            size--;
+        } else {
+            Node tempNode = head;
+            for (int i = 0; i < location - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            size--;
+
+
+        }
+    }
+
 }
