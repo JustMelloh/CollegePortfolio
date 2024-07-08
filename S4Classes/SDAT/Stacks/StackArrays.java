@@ -39,8 +39,22 @@ public class StackArrays {
     /* Here we implement a push method */
 
     public void push(int value) {
-        if (isEmpty()) {
+        if (isFull()) {
             System.out.println("Stack is full. Cannot push");
+        } else {
+            arr[topOfStack + 1] = value;
+            topOfStack++;
+            System.out.println("Value has been pushed to the stack");
         }
     }
+
+    // Implement Pop method
+
+    // Implement Peek method
+
+    // Implement Delete Stack
+
+    // Use the DataStructure to check whether a word is a palindrome or not eg: race car == race car
+
+    // Implement a stack DataStructure using LinkedList instead of Arrays.
 }
