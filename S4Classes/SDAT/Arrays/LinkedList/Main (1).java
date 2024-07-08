@@ -1,6 +1,6 @@
-package DoubleLinkedList;
+package Arrays.LinkedList;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         doublyLinkedList.insertDLL(1, 0);

@@ -1,6 +1,4 @@
-package DoubleLinkedList;
-
-import LinkedList.Node;
+package Arrays.LinkedList;
 
 public class DoublyLinkedList {
     DoublyNode head;
